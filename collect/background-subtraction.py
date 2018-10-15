@@ -1,5 +1,28 @@
 import numpy as np
 import cv2 as cv
+import math
+
+class Model:
+
+    def __init__():
+        self.model_size = 100
+        self.x = None
+        self.y = None
+        self.x0 = self.model_size / 2
+        self.y0 = self.model_size / 2
+        self.t = 0
+        self.speed = 1
+        self.move()
+
+    def move():
+        self.t += 1
+        self.x = math.cos(self.t) * self.speed
+        self.y = math.sin(self.t) * self.speed
+
+    def get_image():
+        pass
+
+
 
 def extract_foreground(img, mask):
     return img * (mask[:, :, np.newaxis] == 255)
